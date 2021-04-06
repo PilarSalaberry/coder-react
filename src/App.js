@@ -1,31 +1,14 @@
 import './App.css';
+import React from 'react';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="app">
       <h1 className="h1">Sol Azul | Macetas Artesanales</h1>
-      <ul className="list">
-        <li>
-          <a href="/#" className="item">
-            Inicio
-          </a>
-        </li>
-        <li>
-          <a href="/#" className="item">
-            Cemento
-          </a>
-        </li>
-        <li>
-          <a href="/#" className="item">
-            Piedras
-          </a>
-        </li>
-        <li>
-          <a href="/#" className="item">
-            Contacto
-          </a>
-        </li>
-      </ul>
+      <NavBar />
+      <ItemListContainer greeting="Bienvenid@s!" />
     </div>
   );
 }

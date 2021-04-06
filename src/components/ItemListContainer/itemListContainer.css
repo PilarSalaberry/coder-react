@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.greet {
+  font-size: 2rem;
+  color: #777;
+}
