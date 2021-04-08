@@ -7,7 +7,7 @@ export default class ItemCount extends Component {
     super();
 
     this.state = {
-      count: 0,
+      count: 1,
       stock: 10,
     };
   }
