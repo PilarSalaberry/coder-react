@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import Item from './components/Item/Item';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NavBar />
       <ItemListContainer greeting="Bienvenid@s!" />
       <ItemCount />
+      <Item />
     </div>
   );
 }
