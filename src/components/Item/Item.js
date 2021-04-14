@@ -1,31 +1,19 @@
 import React, { Component } from 'react';
-import { Data } from '../../Data/Data';
-import Product from '../Product/Product';
+import { Card } from 'semantic-ui-react';
+import Logo from '../../Data/img/Maceta1.jpeg';
+import './item.css';
 
-class Item extends Component {
-  constructor() {
-    super();
-    this.state = {
-      ciclo: [],
-    };
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        ciclo: Data,
-      });
-    }, 2000);
-  }
-  render() {
-    return (
-      <div className="product-container">
-        {this.state.ciclo.map((data) => {
-          return <Product data={data} key={data.id} />;
-        })}
-      </div>
-    );
-  }
-}
+const Item = ({ data }) => (
+  <Card className="card">
+    <img src={Logo} className="imgMaceta" />
+    <Card.Content>
+      <Card.Header>{data.nombre}</Card.Header>
+      <Card.Meta>
+        <span className="date">{data.precio}</span>
+      </Card.Meta>
+      <Card.Description>{data.description}</Card.Description>
+    </Card.Content>
+  </Card>
+);
 
 export default Item;
