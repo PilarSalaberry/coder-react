@@ -22,8 +22,9 @@ class ItemListContainer extends Component {
   render() {
     return (
       <div>
-        <div className="container"></div>
-        <ItemList data={this.state.ciclo} />
+        <div className="container">
+          <ItemList data={this.state.ciclo} />
+        </div>
       </div>
     );
   }
