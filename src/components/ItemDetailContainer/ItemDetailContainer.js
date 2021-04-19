@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import image1 from '../../Data/img/Maceta1.jpeg';
+import './ItemDetailContainer.css';
 
 function ItemDetailContainer() {
   const [item, setItem] = useState({});
@@ -14,6 +15,7 @@ function ItemDetailContainer() {
         precio: 500,
         tipo: 'Piedras',
         descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
+        info: 'Maceta de cemento pintada a mano',
         image: image1,
       });
     }, 2000);
@@ -24,9 +26,14 @@ function ItemDetailContainer() {
       setItem(data);
       setLoading(false);
     });
+    //eslint-disable-next-line
   }, [loading]);
 
-  return <div>{!loading && <ItemDetail data={item} />}</div>;
+  return (
+    <div className="container-detail">
+      {!loading && <ItemDetail data={item} />}
+    </div>
+  );
 }
 
 export default ItemDetailContainer;

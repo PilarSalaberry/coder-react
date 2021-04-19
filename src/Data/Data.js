@@ -9,6 +9,7 @@ export const Data = [
     precio: 500,
     tipo: 'Piedras',
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
+    info: 'Maceta de cemento pintada a mano',
     image: image1,
   },
   {
@@ -17,6 +18,7 @@ export const Data = [
     precio: 500,
     tipo: 'Piedras',
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
+    info: 'Maceta de cemento pintada a mano',
     image: image2,
   },
   {
@@ -25,6 +27,7 @@ export const Data = [
     precio: 550,
     tipo: 'Cemento',
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
+    info: 'Maceta de cemento pintada a mano',
     image: image3,
   },
 ];
