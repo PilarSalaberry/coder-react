@@ -1,33 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './itemListContainer.css';
-import ItemList from '../ItemList/ItemList';
-import { Data } from '../../Data/Data';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
-class ItemListContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      ciclo: [],
-    };
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        ciclo: Data,
-      });
-    }, 2000);
-  }
-
-  render() {
-    return (
-      <div>
-        <div className="container">
-          <ItemList data={this.state.ciclo} />
-        </div>
-      </div>
-    );
-  }
-}
+const ItemListContainer = () => {
+  return (
+    <div>
+      <ItemDetailContainer />
+    </div>
+  );
+};
 
 export default ItemListContainer;

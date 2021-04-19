@@ -5,7 +5,6 @@ import CartWidget from '../CartWidget/CartWidget';
 function NavBar() {
   return (
     <div className="nav">
-      <CartWidget />
       <ul className="list">
         <li>
           <a href="/#" className="item">
@@ -28,6 +27,7 @@ function NavBar() {
           </a>
         </li>
       </ul>
+      <CartWidget />
     </div>
   );
 }
