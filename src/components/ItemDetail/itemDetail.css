@@ -12,72 +12,27 @@ body {
 a {
   text-decoration: none;
 }
-.product-card {
+.card {
   width: 30%;
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf;
   margin: 2rem auto;
   background: #fafafa;
-}
-
-.product-tumb {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 300px;
-  padding: 2rem;
-  background: #f0f0f0;
 }
 
-.product-tumb img {
-  max-width: 100%;
-  max-height: 100%;
+.image {
+  width: 70%;
+  padding: 2rem;
 }
 
 .product-details {
   padding: 30px;
 }
 
-.a-product {
-  font-weight: 500;
-  display: block;
-  margin-bottom: 18px;
-  text-transform: uppercase;
-  color: #363636;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.a-product:hover {
-  color: #fbb72c;
-}
-
-.p-product {
-  font-size: 15px;
-  line-height: 22px;
-  margin-bottom: 18px;
-  color: #999;
-}
-
-.product-bottom-details {
-  overflow: hidden;
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-}
-
-.product-bottom-details div {
-  float: left;
-  width: 50%;
-}
-
-.product-price {
-  font-size: 18px;
-  color: #fbb72c;
-  font-weight: 600;
-}
-
-.product-links {
-  text-align: right;
+.ui.card.card {
+  background-color: #f6f6f6;
+  padding: 0.5rem;
 }
 
 .a-links {
