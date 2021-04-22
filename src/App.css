@@ -9,4 +9,9 @@
   text-align: center;
   font-size: 3rem;
   cursor: pointer;
+  color: cadetblue;
+}
+
+.h2 {
+  text-align: center;
 }

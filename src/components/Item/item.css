@@ -16,7 +16,6 @@ a {
   width: 30%;
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf;
-  margin: 2rem auto;
   background: #fafafa;
   align-items: center;
 }
@@ -34,6 +33,7 @@ a {
 .ui.card.card {
   background-color: #f6f6f6;
   padding: 0.5rem;
+  margin: 2rem;
 }
 
 .a-links {

@@ -15,12 +15,13 @@ const Item = ({ data }) => (
       <Card.Description>{data.descripcion}</Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a href="google.com" className="a-links">
+      <p href="google.com" className="a-links">
+        {/* Ver de cambiar a button */}
         <FontAwesomeIcon icon={faHeart} />
-      </a>
-      <a href="google.com" className="a-links">
+      </p>
+      <p href="google.com" className="a-links">
         <FontAwesomeIcon icon={faShoppingCart} />
-      </a>
+      </p>
     </Card.Content>
   </Card>
 );

@@ -1,6 +1,7 @@
 .item-container {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  justify-items: center;
 }
