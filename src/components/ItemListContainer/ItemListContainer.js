@@ -1,33 +1,36 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import './itemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 import { Data } from '../../Data/Data';
+import { useParams } from 'react-router-dom';
 
-class ItemListContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      ciclo: [],
-    };
-  }
+function ItemListContainer() {
+  const [ciclo, setCiclo] = useState([]);
+  const { id } = useParams();
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        ciclo: Data,
+  useEffect(() => {
+    let c = Data;
+    if (!!id) {
+      c = c.filter((elem) => {
+        return elem.categoria.toString() === id.toString();
       });
+    }
+    setTimeout(() => {
+      setCiclo(c);
     }, 2000);
-  }
+  }, [id]);
 
-  render() {
-    return (
-      <div>
-        <div className="container">
-          <ItemList data={this.state.ciclo} />
-        </div>
+  return (
+    <div>
+      <div className="container">
+        {ciclo.length ? (
+          <ItemList data={ciclo} />
+        ) : (
+          <h2>No hay productos en esta categoría</h2>
+        )}
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default ItemListContainer;

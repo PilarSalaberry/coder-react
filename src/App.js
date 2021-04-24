@@ -5,9 +5,6 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { Link } from 'react-router-dom';
-import Velas from './views/Categorias/Velas';
-import Macetas from './views/Categorias/Macetas';
-import Capilar from './views/Categorias/Capilar';
 
 function App() {
   return (
@@ -20,10 +17,8 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/" exact component={ItemListContainer} />
-          <Route path="/velas" exact component={Velas} />
-          <Route path="/macetas" exact component={Macetas} />
-          <Route path="/capilar" exact component={Capilar} />
           <Route path="/item/:id" component={ItemDetailContainer} />
+          <Route path="/category/:id" component={ItemListContainer} />
         </Switch>
       </div>
     </Router>
