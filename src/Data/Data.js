@@ -26,6 +26,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image1,
+    stock: 5,
   },
   {
     id: '2',
@@ -35,6 +36,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image2,
+    stock: 2,
   },
   {
     id: '3',
@@ -44,6 +46,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image3,
+    stock: 4,
   },
   {
     id: '4',
@@ -53,6 +56,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image4,
+    stock: 5,
   },
   {
     id: '5',
@@ -62,6 +66,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image5,
+    stock: 5,
   },
   {
     id: '6',
@@ -71,6 +76,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image6,
+    stock: 6,
   },
   {
     id: '7',
@@ -80,6 +86,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image7,
+    stock: 5,
   },
   {
     id: '8',
@@ -89,6 +96,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image8,
+    stock: 5,
   },
   {
     id: '9',
@@ -98,6 +106,7 @@ export const Data = [
     descripcion: 'Alto: 11cm, Diametro: 11cm, Circunferencia: 34cm',
     info: 'Maceta de cemento pintada a mano',
     image: image9,
+    stock: 5,
   },
   {
     id: '10',
@@ -107,6 +116,7 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela1,
+    stock: 8,
   },
   {
     id: '11',
@@ -116,6 +126,7 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela2,
+    stock: 5,
   },
   {
     id: '12',
@@ -125,6 +136,7 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela3,
+    stock: 6,
   },
   {
     id: '13',
@@ -134,6 +146,7 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela4,
+    stock: 2,
   },
   {
     id: '14',
@@ -143,6 +156,7 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela5,
+    stock: 4,
   },
   {
     id: '15',
@@ -152,6 +166,7 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela6,
+    stock: 5,
   },
   {
     id: '16',
@@ -161,6 +176,7 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela7,
+    stock: 5,
   },
   {
     id: '17',
@@ -170,6 +186,7 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela8,
+    stock: 5,
   },
   {
     id: '18',
@@ -179,5 +196,6 @@ export const Data = [
     descripcion: 'Alto: 10cm',
     info: 'Vela de Soja',
     image: vela9,
+    stock: 5,
   },
 ];

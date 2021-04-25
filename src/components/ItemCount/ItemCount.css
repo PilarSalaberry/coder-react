@@ -1,0 +1,32 @@
+.contador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+  color: #333;
+  width: 50%;
+}
+
+.contador-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cant-product {
+  font-size: 1.8rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+
+.ui.button.button-to-cart {
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+
+.ui.button.button-add-to-cart {
+  width: 100%;
+}

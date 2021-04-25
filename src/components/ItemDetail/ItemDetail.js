@@ -1,9 +1,21 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
 import './itemDetail.css';
+import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = ({ data }) => {
+function ItemDetail({ data }) {
+  const [cant, setCant] = useState(0);
+
+  function onAdd() {
+    if (data.stock > cant) {
+      setCant(cant + 1);
+    }
+  }
+  function onDecrease() {
+    if (cant > 0) {
+      setCant(cant - 1);
+    }
+  }
+
   return (
     <div className="product-card">
       <div className="product-tumb">
@@ -15,17 +27,10 @@ const ItemDetail = ({ data }) => {
         <p className="p-product">{data.info}</p>
         <div className="product-bottom-details">
           <div className="product-price">{'$' + data.precio}</div>
-          <div className="product-links">
-            <a href="./" className="a-links">
-              <FontAwesomeIcon icon={faHeart} />
-            </a>
-            <a href="./" className="a-links">
-              <FontAwesomeIcon icon={faShoppingCart} />
-            </a>
-          </div>
+          <ItemCount onAdd={onAdd} onDecrease={onDecrease} cant={cant} />
         </div>
       </div>
     </div>
   );
-};
+}
 export default ItemDetail;

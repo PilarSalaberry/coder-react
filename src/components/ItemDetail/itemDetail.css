@@ -63,12 +63,10 @@ a {
 .product-bottom-details {
   overflow: hidden;
   border-top: 2px solid #777;
-  padding-top: 3rem;
-}
-
-.product-bottom-details div {
-  float: left;
-  width: 50%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .product-price {
@@ -76,6 +74,7 @@ a {
   padding: 1rem;
   color: #fbb72c;
   font-weight: 600;
+  width: 50%;
 }
 
 .product-links {
