@@ -7,8 +7,10 @@ import { NavLink } from 'react-router-dom';
 function NavBar() {
   return (
     <div className="nav">
-      <Menu>
-        <Menu.Item>Inicio</Menu.Item>
+      <Menu secondary>
+        <NavLink exact to="/">
+          <Menu.Item>Inicio</Menu.Item>
+        </NavLink>
         <Dropdown text="Productos" pointing className="link item">
           <Dropdown.Menu>
             <Dropdown.Header>Categorias</Dropdown.Header>

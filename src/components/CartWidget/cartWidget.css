@@ -6,6 +6,8 @@
 .cart-icon {
   color: #777;
   cursor: pointer;
+  font-size: 2rem;
+  margin: 1rem;
 }
 
 .cart-icon:hover {

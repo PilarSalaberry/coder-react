@@ -31,9 +31,13 @@ a {
 }
 
 .ui.card.card {
-  background-color: #f6f6f6;
+  background-color: #fff;
   padding: 0.5rem;
   margin: 2rem;
+}
+
+.ui.card.card:hover {
+  box-shadow: 0 8px 16px 0 #777;
 }
 
 .a-links {

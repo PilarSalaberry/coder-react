@@ -28,16 +28,35 @@ function ItemCount(prop) {
           </Link>
         )}
       </div>
-      <div>
-        <Button
-          color="linkedin"
-          className="button-add-to-cart"
-          disabled={prop.cant < 1 || button}
-          onClick={() => setButton(true)}
-        >
-          Agregar al carrito
-        </Button>
-      </div>
+      {!button && (
+        <div>
+          <Button
+            color="linkedin"
+            className="button-add-to-cart"
+            disabled={prop.cant < 1}
+            onClick={() => {
+              setButton(true);
+              prop.addItem();
+            }}
+          >
+            Agregar al carrito
+          </Button>
+        </div>
+      )}
+      {button && (
+        <div>
+          <Link to="/">
+            <Button
+              color="linkedin"
+              className="button-add-to-cart"
+              disabled={prop.cant < 1}
+              onClick={() => {}}
+            >
+              Volver
+            </Button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

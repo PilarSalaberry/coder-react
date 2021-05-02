@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './itemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../CartContext/CartContext';
 
 function ItemDetail({ data }) {
   const [cant, setCant] = useState(0);
+  const [item, setItem] = useContext(CartContext);
 
   function onAdd() {
     if (data.stock > cant) {
@@ -13,6 +15,19 @@ function ItemDetail({ data }) {
   function onDecrease() {
     if (cant > 0) {
       setCant(cant - 1);
+    }
+  }
+  function addItem() {
+    if (item.some((elem) => elem.id === data.id)) {
+      alert('el producto ya existe en el carrito');
+    } else {
+      const newItem = {
+        nombre: data.nombre,
+        precio: data.precio,
+        cant: cant,
+        id: data.id.toString(),
+      };
+      setItem((currentState) => [...currentState, newItem]);
     }
   }
 
@@ -27,7 +42,12 @@ function ItemDetail({ data }) {
         <p className="p-product">{data.info}</p>
         <div className="product-bottom-details">
           <div className="product-price">{'$' + data.precio}</div>
-          <ItemCount onAdd={onAdd} onDecrease={onDecrease} cant={cant} />
+          <ItemCount
+            onAdd={onAdd}
+            onDecrease={onDecrease}
+            addItem={addItem}
+            cant={cant}
+          />
         </div>
       </div>
     </div>
