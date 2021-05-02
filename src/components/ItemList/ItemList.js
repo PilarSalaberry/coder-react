@@ -8,7 +8,7 @@ const ItemList = ({ data }) => {
     <div className="item-container">
       {data.map((item) => {
         return (
-          <Link to={`item/${item.id}`} key={item.id}>
+          <Link exact to={`/item/${item.id}`} key={item.id}>
             <Item data={item} key={item.id} />
           </Link>
         );
