@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../CartContext/CartContext';
+import { CartContext } from '../../CartContext/CartContext';
 import './Cart.css';
 
 function Cart() {
-  /* eslint-disable no-unused-vars */
-  const [item, setItem] = useContext(CartContext);
-  const totalItems = item.reduce((total, current) => total + current.cant, 0);
+  const context = useContext(CartContext);
+  const items = context.getItems();
+  const totalItems = items.reduce((total, current) => total + current.cant, 0);
 
   return (
     <div className="cart">

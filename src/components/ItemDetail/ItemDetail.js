@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import './itemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
-import { CartContext } from '../CartContext/CartContext';
+import { CartContext } from '../../CartContext/CartContext';
 
 function ItemDetail({ data }) {
   const [cant, setCant] = useState(0);
-  const [item, setItem] = useContext(CartContext);
+  const context = useContext(CartContext);
 
   function onAdd() {
     if (data.stock > cant) {
@@ -17,18 +17,15 @@ function ItemDetail({ data }) {
       setCant(cant - 1);
     }
   }
-  function addItem() {
-    if (item.some((elem) => elem.id === data.id)) {
-      alert('el producto ya existe en el carrito');
-    } else {
-      const newItem = {
-        nombre: data.nombre,
-        precio: data.precio,
-        cant: cant,
-        id: data.id.toString(),
-      };
-      setItem((currentState) => [...currentState, newItem]);
-    }
+  function addToCart() {
+    const newItem = {
+      nombre: data.nombre,
+      precio: data.precio,
+      cant: cant,
+      id: data.id.toString(),
+    };
+
+    context.addItem(newItem);
   }
 
   return (
@@ -45,7 +42,7 @@ function ItemDetail({ data }) {
           <ItemCount
             onAdd={onAdd}
             onDecrease={onDecrease}
-            addItem={addItem}
+            addItem={addToCart}
             cant={cant}
           />
         </div>
@@ -53,4 +50,5 @@ function ItemDetail({ data }) {
     </div>
   );
 }
+
 export default ItemDetail;
