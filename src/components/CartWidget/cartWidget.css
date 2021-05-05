@@ -6,10 +6,25 @@
 .cart-icon {
   color: #777;
   cursor: pointer;
-  font-size: 2rem;
-  margin: 1rem;
 }
 
 .cart-icon:hover {
   color: #fff;
+}
+
+.fa-shopping-cart {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.number-cart {
+  font-size: 1.6rem;
+  margin: 0.5rem;
+}
+
+.cart-icon a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #333;
 }

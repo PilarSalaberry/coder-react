@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './cartWidget.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { CartContext } from '../../CartContext/CartContext';
+import { Link } from 'react-router-dom';
 
 function CartWidget() {
+  const context = useContext(CartContext);
+  const cant = context.getQuantity();
   return (
-    <div className="cart-icon" onClick={() => alert('Carrito')}>
-      <FontAwesomeIcon icon={faShoppingCart} />
-    </div>
+    cant > 0 && (
+      <div className="cart-icon">
+        <Link to="/cart">
+          <FontAwesomeIcon
+            className="shopping-cart-icon"
+            icon={faShoppingCart}
+          />
+          <p className="number-cart">{cant}</p>
+        </Link>
+      </div>
+    )
   );
 }
 

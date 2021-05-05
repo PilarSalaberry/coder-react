@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { useState } from 'react';
 
 export const CartContext = React.createContext();
 
@@ -17,10 +17,23 @@ export const CartProvider = (props) => {
     }
   };
 
+  const getQuantity = () => {
+    return item.reduce((total, current) => total + current.cant, 0);
+  };
+
+  const removeItem = (id) => {
+    const products = item.filter(
+      (elem) => elem.id.toString() !== id.toString()
+    );
+    setItem(products);
+  };
+
   const value = { item, setItem };
 
   return (
-    <CartContext.Provider value={{ value, addItem, getItems }}>
+    <CartContext.Provider
+      value={{ value, addItem, getItems, getQuantity, removeItem }}
+    >
       {props.children}
     </CartContext.Provider>
   );
