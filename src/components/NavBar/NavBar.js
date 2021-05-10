@@ -14,13 +14,13 @@ function NavBar() {
         <Dropdown text="Productos" pointing className="link item">
           <Dropdown.Menu>
             <Dropdown.Header>Categorias</Dropdown.Header>
-            <NavLink exact to="/category/1">
+            <NavLink exact to="/1">
               <Dropdown.Item>Macetas</Dropdown.Item>
             </NavLink>
-            <NavLink exact to="/category/2">
+            <NavLink exact to="/2">
               <Dropdown.Item>Velas de Soja</Dropdown.Item>
             </NavLink>
-            <NavLink exact to="/category/3">
+            <NavLink exact to="/3">
               <Dropdown.Item>Cuidado Capilar</Dropdown.Item>
             </NavLink>
           </Dropdown.Menu>

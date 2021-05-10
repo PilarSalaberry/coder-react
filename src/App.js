@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { Link } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from './CartContext/CartContext';
+import { db } from './firebase';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           </header>
           <Switch>
             <Route path="/" exact component={ItemListContainer} />
-            <Route path="/category/:id" component={ItemListContainer} />
+            <Route path="/:categoryId" component={ItemListContainer} />
             <Route path="/item/:id" component={ItemDetailContainer} />
             <Route path="/cart" component={Cart} />
           </Switch>

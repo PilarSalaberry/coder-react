@@ -1,38 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
-import { Data } from '../../Data/Data';
+import { db } from '../../firebase';
 import { useParams } from 'react-router-dom';
 
-function ItemDetailContainer() {
-  const data = Data;
-  const [item, setItem] = useState({});
+const ItemDetailContainer = () => {
+  const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
-  const getItems = new Promise((resolve, reject) => {
-    const prod = data.find((elem) => {
-      return elem.id === id;
-    });
-    setTimeout(() => {
-      setItem(prod);
-      resolve({ item });
-    });
-  }, 2000);
-
-  useEffect(() => {
-    getItems.then((data) => {
-      setItem(data);
+  const getData = async () => {
+    db.collection('productos').onSnapshot((querySnapshot) => {
+      const docs = [];
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+      const product = docs.find((elem) => {
+        return elem.id === id;
+      });
+      setItem(product);
       setLoading(false);
     });
-    //eslint-disable-next-line
-  }, [loading]);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div className="container-detail">
       {!loading && <ItemDetail data={item} />}
     </div>
   );
-}
+};
 
 export default ItemDetailContainer;
