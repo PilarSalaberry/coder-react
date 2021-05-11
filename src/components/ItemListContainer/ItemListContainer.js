@@ -8,25 +8,22 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { categoryId } = useParams();
 
-  const getData = async () => {
+  useEffect(() => {
     db.collection('productos').onSnapshot((querySnapshot) => {
       const docs = [];
       querySnapshot.forEach((doc) => {
         docs.push({ ...doc.data(), id: doc.id });
       });
-      setItems(docs);
+      if (categoryId) {
+        setItems(
+          docs.filter((elem) => {
+            return elem.categoryId.toString() === categoryId.toString();
+          })
+        );
+      } else {
+        setItems(docs);
+      }
     });
-  };
-  useEffect(() => {
-    getData();
-    let filterItems = items;
-    if (!!categoryId) {
-      filterItems = items.filter((elem) => {
-        return elem.categoryId.toString() === categoryId.toString();
-      });
-      setItems(filterItems);
-      console.log(filterItems);
-    }
   }, [categoryId]);
 
   return (
