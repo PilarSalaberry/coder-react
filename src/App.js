@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { Link } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from './CartContext/CartContext';
+import Form from './Form';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             />
             <Route path="/item/:id" component={ItemDetailContainer} />
             <Route path="/cart" component={Cart} />
+            <Route path="/form">
+              <Form />
+            </Route>
           </Switch>
         </div>
       </CartProvider>

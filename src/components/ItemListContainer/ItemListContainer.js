@@ -9,21 +9,23 @@ const ItemListContainer = () => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    db.collection('productos').onSnapshot((querySnapshot) => {
-      const docs = [];
-      querySnapshot.forEach((doc) => {
-        docs.push({ ...doc.data(), id: doc.id });
+    db.collection('productos')
+      .orderBy('nombre')
+      .onSnapshot((querySnapshot) => {
+        const docs = [];
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id });
+        });
+        if (categoryId) {
+          setItems(
+            docs.filter((elem) => {
+              return elem.categoryId.toString() === categoryId.toString();
+            })
+          );
+        } else {
+          setItems(docs);
+        }
       });
-      if (categoryId) {
-        setItems(
-          docs.filter((elem) => {
-            return elem.categoryId.toString() === categoryId.toString();
-          })
-        );
-      } else {
-        setItems(docs);
-      }
-    });
   }, [categoryId]);
 
   return (
