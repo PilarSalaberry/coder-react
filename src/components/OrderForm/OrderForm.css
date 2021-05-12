@@ -1,0 +1,15 @@
+.form-checkout {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.field {
+  margin: 1rem;
+}
+
+.label {
+  padding-right: 1rem;
+}

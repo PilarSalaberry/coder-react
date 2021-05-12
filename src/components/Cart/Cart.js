@@ -8,11 +8,12 @@ import NumberFormat from 'react-number-format';
 function Cart() {
   const context = useContext(CartContext);
   const items = context.getItems();
-  const totalAmount = items.reduce(
+  const totalAmount = context.getTotalAmount();
+  /* const totalAmount = items.reduce(
     (total, current) => total + current.precio,
     0
   );
-
+ */
   return items.length ? (
     <div className="cart">
       {items.map((elem) => {
@@ -35,7 +36,7 @@ function Cart() {
       })}
       <div className="cart-total">
         <h4>
-          TOTAL:{' '}
+          TOTAL:
           <NumberFormat
             value={totalAmount.toFixed(2)}
             displayType={'text'}
@@ -44,6 +45,11 @@ function Cart() {
           />
         </h4>
       </div>
+      <Link to="/orderform">
+        <Button size="large" color="vk">
+          Comprar!
+        </Button>
+      </Link>
     </div>
   ) : (
     <div className="cart">

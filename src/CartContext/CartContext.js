@@ -17,6 +17,14 @@ export const CartProvider = (props) => {
     }
   };
 
+  const getTotalAmount = () => {
+    const total = item.reduce(
+      (total, current) => total + current.precio * current.cant,
+      0
+    );
+    return total;
+  };
+
   const getQuantity = () => {
     return item.reduce((total, current) => total + current.cant, 0);
   };
@@ -32,7 +40,14 @@ export const CartProvider = (props) => {
 
   return (
     <CartContext.Provider
-      value={{ value, addItem, getItems, getQuantity, removeItem }}
+      value={{
+        value,
+        addItem,
+        getItems,
+        getQuantity,
+        removeItem,
+        getTotalAmount,
+      }}
     >
       {props.children}
     </CartContext.Provider>

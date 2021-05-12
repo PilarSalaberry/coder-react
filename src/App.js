@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from './CartContext/CartContext';
 import Form from './Form';
-
+import OrderForm from './components/OrderForm/OrderForm';
 function App() {
   return (
     <Router>
@@ -31,6 +31,9 @@ function App() {
             <Route path="/cart" component={Cart} />
             <Route path="/form">
               <Form />
+            </Route>
+            <Route path="/orderform">
+              <OrderForm />
             </Route>
           </Switch>
         </div>
