@@ -7,9 +7,21 @@
 }
 
 .field {
+  display: flex;
   margin: 1rem;
+  min-width: 30%;
+  flex-direction: column;
 }
 
 .label {
   padding-right: 1rem;
+  min-width: 50%;
+  margin: 0.5rem;
+}
+
+.ui.large.button {
+  margin: 1rem;
+}
+
+.input {
 }

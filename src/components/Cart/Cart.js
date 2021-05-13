@@ -9,11 +9,7 @@ function Cart() {
   const context = useContext(CartContext);
   const items = context.getItems();
   const totalAmount = context.getTotalAmount();
-  /* const totalAmount = items.reduce(
-    (total, current) => total + current.precio,
-    0
-  );
- */
+
   return items.length ? (
     <div className="cart">
       {items.map((elem) => {
