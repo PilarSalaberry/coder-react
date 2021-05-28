@@ -1,3 +1,7 @@
+Sol Azul - Tienda Sustentable
+
+Ecommerce de productos sustentables, como macetas recicladas, velas de soja, entre otros.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

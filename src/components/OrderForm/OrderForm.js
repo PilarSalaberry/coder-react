@@ -65,6 +65,7 @@ function OrderForm() {
     e.preventDefault();
     try {
       a = await db.collection('ordenes').add(order);
+      setOrderId(a._delegate._key.path.segments[1]);
       stockUpdate();
       setOrderSent(true);
       context.emptyCart();
