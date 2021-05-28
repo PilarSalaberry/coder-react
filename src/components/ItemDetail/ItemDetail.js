@@ -17,10 +17,12 @@ function ItemDetail({ data }) {
       setCant(cant - 1);
     }
   }
+
   function addToCart() {
     const newItem = {
       nombre: data.nombre,
       precio: data.precio,
+      stock: data.stock,
       cant: cant,
       id: data.id.toString(),
     };

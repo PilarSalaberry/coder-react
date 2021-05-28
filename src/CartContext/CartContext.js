@@ -5,6 +5,10 @@ export const CartContext = React.createContext();
 export const CartProvider = (props) => {
   const [item, setItem] = useState([]);
 
+  const emptyCart = () => {
+    setItem([]);
+  };
+
   const getItems = () => {
     return item;
   };
@@ -47,6 +51,7 @@ export const CartProvider = (props) => {
         getQuantity,
         removeItem,
         getTotalAmount,
+        emptyCart,
       }}
     >
       {props.children}

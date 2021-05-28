@@ -51,3 +51,8 @@ a {
 .a-links:hover {
   color: #fbb72c;
 }
+
+.ui.card > .content,
+.ui.cards > .card > .content {
+  text-align: center;
+}

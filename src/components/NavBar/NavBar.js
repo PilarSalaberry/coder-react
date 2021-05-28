@@ -25,7 +25,6 @@ function NavBar() {
             </NavLink>
           </Dropdown.Menu>
         </Dropdown>
-        <Menu.Item>Contacto</Menu.Item>
       </Menu>
       <CartWidget />
     </div>

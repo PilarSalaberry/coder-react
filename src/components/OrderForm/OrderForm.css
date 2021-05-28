@@ -23,5 +23,6 @@
   margin: 1rem;
 }
 
-.input {
+.ui.positive.message .header {
+  text-align: center;
 }
