@@ -36,6 +36,9 @@ function App() {
               <OrderForm />
             </Route>
           </Switch>
+          <footer className="footer">
+            <p className="p-footer">Todos los derechos reservados</p>
+          </footer>
         </div>
       </CartProvider>
     </Router>
